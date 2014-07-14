@@ -1,13 +1,13 @@
 <?php
 /**
- * Скрипт удаляет старые файлы из папки.
+ * РЎРєСЂРёРїС‚ СѓРґР°Р»СЏРµС‚ СЃС‚Р°СЂС‹Рµ С„Р°Р№Р»С‹ РёР· РїР°РїРєРё.
  *
  * @date 19.06.14
  * @author nicon <nicon@newmail.ru>
  * @version 0.1
  */
 
-$folder = 'C:\\Users\\техпром\\Downloads\\';
+$folder = 'C:\\Users\\С‚РµС…РїСЂРѕРј\\Downloads\\';
 $age = 30; // days
 
 if (!$dir = opendir($folder)) exit(1);
