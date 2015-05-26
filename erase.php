@@ -1,16 +1,23 @@
 <?php
 /**
- * Скрипт удаляет старые файлы из папки.
+ * Remove old files in folder
  *
- * @date 19.06.14
  * @author nicon <nicon@newmail.ru>
- * @version 0.1
+ * @version 0.1.1
  */
 
-$folder = 'C:\\Users\\техпром\\Downloads\\';
-$age = 30; // days
+if ($argc < 2) {
+    error_log('usage: php erase.php path/to/folder/ [days]');
+    exit(1);
+}
 
-if (!$dir = opendir($folder)) exit(1);
+$folder = $argv[1];
+$age = isset($argv[2]) ? $argv[2] : 30; // days
+
+if (!$dir = opendir($folder)) {
+    error_log("Can't read directory $folder");
+    exit(1);
+}
 
 $date = strtotime("-{$age} days");
 
