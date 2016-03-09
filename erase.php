@@ -2,7 +2,7 @@
 /**
  * Remove old files in folder
  *
- * @author nicon <nicon@newmail.ru>
+ * @author nicon <nicon.work@gmail.com>
  * @version 0.1.1
  */
 
